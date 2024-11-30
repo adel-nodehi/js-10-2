@@ -62,6 +62,8 @@ function three() {
 one();
 */
 
+/*
+// Date
 const now = new Date();
 
 console.log(now);
@@ -89,3 +91,18 @@ console.log(formattedDate.format(now));
 
 // get browser/user locale
 console.log(navigator.language);
+*/
+
+// localStorage
+const user = {
+  name: 'Ali',
+  age: 20,
+};
+
+localStorage.setItem('user', JSON.stringify(user));
+
+console.log(localStorage.getItem('user'));
+console.log(JSON.parse(localStorage.getItem('user')));
+
+// localStorage.removeItem('name');
+console.log(localStorage.getItem('name'));
