@@ -93,6 +93,7 @@ console.log(formattedDate.format(now));
 console.log(navigator.language);
 */
 
+/*
 // localStorage
 const user = {
   name: 'Ali',
@@ -106,3 +107,15 @@ console.log(JSON.parse(localStorage.getItem('user')));
 
 // localStorage.removeItem('name');
 console.log(localStorage.getItem('name'));
+*/
+
+// geo location
+navigator.geolocation.getCurrentPosition(function (position) {
+  const { latitude: lat, longitude: lng } = position.coords;
+
+  console.log(position);
+
+  console.log(`https://www.google.com/maps/@${lat},${lng},14.85z`);
+});
+
+//https://www.google.com/maps/@4.4138704,32.6589165,2.71z
