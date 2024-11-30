@@ -122,6 +122,7 @@ navigator.geolocation.getCurrentPosition(function (position) {
 //https://www.google.com/maps/@4.4138704,32.6589165,2.71z
 */
 
+/*
 // scroll
 document.addEventListener('click', function () {
   //   console.log('x', window.pageXOffset);
@@ -133,3 +134,19 @@ document.addEventListener('click', function () {
     behavior: 'smooth',
   });
 });
+*/
+
+const content7 = document.querySelector('.content-7');
+const content9 = document.querySelector('.content-9');
+
+const observer = new IntersectionObserver(function (entries, observer) {
+  console.log(entries);
+  //   console.log(entry.isIntersecting);
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+});
+
+observer.observe(content7);
+observer.observe(content9);
