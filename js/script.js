@@ -33,6 +33,7 @@ const calcFactorial = num => {
 };
 */
 
+/*
 const calcFactorial = num => {
   if (num === 0) return 1;
 
@@ -40,6 +41,7 @@ const calcFactorial = num => {
 };
 
 console.log(calcFactorial(5));
+*/
 
 /* 
 // Call stack
@@ -59,3 +61,31 @@ function three() {
 
 one();
 */
+
+const now = new Date();
+
+console.log(now);
+console.log(now.getHours());
+console.log(now.getFullYear());
+console.log(now.getDate());
+
+//
+
+console.log(now.toISOString());
+
+const iso = now.toISOString();
+
+console.log(new Date(iso));
+
+// formatting Date
+const formattedDate = new Intl.DateTimeFormat('fa-IR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+  weekday: 'long',
+});
+
+console.log(formattedDate.format(now));
+
+// get browser/user locale
+console.log(navigator.language);
