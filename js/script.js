@@ -109,6 +109,7 @@ console.log(JSON.parse(localStorage.getItem('user')));
 console.log(localStorage.getItem('name'));
 */
 
+/*
 // geo location
 navigator.geolocation.getCurrentPosition(function (position) {
   const { latitude: lat, longitude: lng } = position.coords;
@@ -119,3 +120,16 @@ navigator.geolocation.getCurrentPosition(function (position) {
 });
 
 //https://www.google.com/maps/@4.4138704,32.6589165,2.71z
+*/
+
+// scroll
+document.addEventListener('click', function () {
+  //   console.log('x', window.pageXOffset);
+  //   console.log('y', window.pageYOffset);
+
+  window.scroll({
+    top: 600,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
